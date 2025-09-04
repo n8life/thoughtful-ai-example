@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/schemas/faq.json",
+  "title": "FAQ Schema",
+  "description": "Schema for FAQ data containing questions and answers about Thoughtful AI's healthcare automation agents",
+  "type": "object",
+  "properties": {
+    "questions": {
+      "type": "array",
+      "description": "Array of FAQ items containing questions and their corresponding answers",
+      "items": {
+        "type": "object",
+        "properties": {
+          "question": {
+            "type": "string",
+            "description": "The FAQ question text",
+            "minLength": 1,
+            "maxLength": 500
+          },
+          "answer": {
+            "type": "string",
+            "description": "The answer to the FAQ question",
+            "minLength": 1,
+            "maxLength": 2000
+          }
+        },
+        "required": ["question", "answer"],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "required": ["questions"],
+  "additionalProperties": false
+}
