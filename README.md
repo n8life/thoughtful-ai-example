@@ -31,7 +31,7 @@ cd thoughtful-ai-agent
 This project uses `uv` for dependency management. Install the required packages:
 
 ```bash
-uv pip install -r pyproject.toml
+uv sync
 ```
 
 ### 3. Configure Environment Variables
